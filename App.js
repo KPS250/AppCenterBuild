@@ -24,7 +24,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import Analytics from 'appcenter-analytics';
+import Crashes from 'appcenter-crashes';
+
 const App: () => React$Node = () => {
+  Analytics.trackEvent('Open', {module: 'Home', file: 'App.js'});
+ // Crashes.generateTestCrash();
   return (
     <>
       <StatusBar barStyle="dark-content" />
